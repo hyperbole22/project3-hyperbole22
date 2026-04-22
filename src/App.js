@@ -20,6 +20,7 @@ function Home() {
     '../images/famtrain.jpeg',
     '../images/camping.jpeg',
     '../images/cats.jpeg',
+    '../images/mecat.png',
   ];
 
   React.useEffect(() => {
