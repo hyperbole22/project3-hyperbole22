@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    /* background-color: #f3e6e0; */
+    background-color: #ffbcf5;
     display: flex;
     flex-direction: column;
 }
@@ -33,6 +33,8 @@ main {
 nav {
     text-align: right;
     font-size: 1.25em;
+    background-color: #c084d4;   /* add this — a deeper purple-pink */
+    padding: 8px 20px;           /* add this */
 }
 
 nav ul {
@@ -89,6 +91,37 @@ nav ul li a img {
 
 nav ul li a img:hover {
     text-decoration: none;
+}
+
+/* Fix the header alignment to match the container */
+.header {
+    margin-left: 0;              /* remove the 150px — let the container handle centering */
+    text-align: center;
+}
+
+/* Tighten the container spacing */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;                   /* increase gap slightly for breathing room */
+    padding: 20px 40px;          /* add padding so nothing hugs the edges */
+}
+
+/* Remove the extra margin on .image since gap handles spacing now */
+.image {
+    margin-left: 0;              /* remove the 100px */
+    flex-shrink: 0;              /* prevent image from squishing */
+}
+
+/* Constrain the text more so the image has room */
+.text {
+    font-size: 20px;             /* slightly smaller — 23px is quite large */
+    font-family: georgia;
+    /* color: #33691E; */
+    margin-right: 0;             /* gap handles spacing now */
+    max-width: 40%;              /* tighter than 50% so image isn't pushed right */
+    line-height: 1.7;            /* add for readability */
 }
 
 .cta-button {

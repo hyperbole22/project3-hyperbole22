@@ -92,7 +92,7 @@ function Home() {
                 style={{
                   width: '100px', height: '100px',
                   borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }} />
-              <p style={{ margin: 0, lineHeight: '1.7', color: '#444' }}>
+              <p style={{ margin: 0, lineHeight: '1.7', color: '#444444' }}>
                 Hi, I'm Alex — a CS student passionate about building clean,
                 functional software. I love backend systems, APIs, and solving
                 real-world problems with code.
@@ -100,8 +100,8 @@ function Home() {
             </div>
           </div>
 
-          {!isMobile && <div style={{ width: '1px', background: '#ccc', alignSelf: 'stretch' }} />}
-          {isMobile && <hr style={{ width: '100%', border: 'none', borderTop: '1px solid #ccc' }} />}
+          {!isMobile && <div style={{ width: '1px', background: '#0000ff', alignSelf: 'stretch' }} />}
+          {isMobile && <hr style={{ width: '100%', border: 'none', borderTop: '1px solid #0000ff' }} />}
 
           
           {/* Top Skills */}
@@ -119,22 +119,22 @@ function Home() {
           </div>
 
           {/* Divider */}
-          {!isMobile && <div style={{ width: '1px', background: '#ccc', alignSelf: 'stretch' }} />}
-          {isMobile && <hr style={{ width: '100%', border: 'none', borderTop: '1px solid #ccc' }} />}
+          {!isMobile && <div style={{ width: '1px', background: '#0000ff', alignSelf: 'stretch' }} />}
+          {isMobile && <hr style={{ width: '100%', border: 'none', borderTop: '1px solid #0000ff' }} />}
 
 
           {/* Top Project */}
           <div style={{ flex: '1' }}>
             <h3>Top Project</h3>
             <div style={{
-              border: '1px solid #ddd', borderRadius: '8px', padding: '16px' }}>
+              border: '1px solid #4a4aff', borderRadius: '8px', padding: '16px' }}>
               <h4 style={{ margin: '0 0 8px' }}>Non-prof org site</h4>
               <p style={{ margin: '0 0 12px', color: '#555', lineHeight: '1.6' }}>
                 A website for a mother and daughter to inform people about strokes and tell people about their
                 book about the daughters stroke experience and recovery from the mothers eyes.
               </p>
               <a
-                href="https://github.com/hyperbole22"
+                href="https://github.com/hyperbole22/InTheFaceOfCatastropheGroupWebsite"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: '#0070f3', textDecoration: 'none', fontWeight: '500' }}
@@ -154,16 +154,23 @@ function Home() {
 function AboutMe() {
   return (
     <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! My name is Alex Sullivan, I am currently a computer science student at Pace University.
-        I am a part of a few different organizations on campus, including Gamma Sigma Sigma service sorority
-        and the swimming and diving team. I am from South Jersey (about 20 minutes away from Philadelphia) 
-        and I have 3 cats named Kiki, Soup, and Momo. Kiki stays on campus with me during the school year, 
-        while the other two stay home with my parents and sister, Natalie. In my free time, I enjoy swimming 
-        for fun, spending time with my family, and making things with pottery. Some of my top goals at the 
-        moment are to complete a research project this summer, build a website for people to find higher
-        education right for them, and to get a job lined up with a lot of travel involved.
-      </p>
+      <div class='header'><h2>About Me</h2></div>
+      <div class='container'>
+          <div class='text'>
+            <p>Hello! My name is Alex Sullivan, I am currently a computer science student at Pace University.
+              I am a part of a few different organizations on campus, including Gamma Sigma Sigma service sorority
+              and the swimming and diving team. I am from South Jersey (about 20 minutes away from Philadelphia) 
+              and I have 3 cats named Kiki, Soup, and Momo. Kiki stays on campus with me during the school year, 
+              while the other two stay home with my parents and sister, Natalie. In my free time, I enjoy swimming 
+              for fun, spending time with my family, and making things with pottery. Some of my top goals at the 
+              moment are to complete a research project this summer, build a website for people to find higher
+              education right for them, and to get a job lined up with a lot of travel involved.
+            </p>
+          </div>
+        <div class='image'>
+          <img src="../images/sisswim.png" alt="Alex Sullivan" style={{ width: '563.25px', height: '422.25px', borderRadius: '8px' }} />
+        </div>
+      </div>
     </section>
   );
 }
@@ -189,10 +196,11 @@ function Skills() {
 function Projects() {
   return (
     <section id="projects">
-      <h2>Projects</h2>
-      <div>
+      <center><h2>Projects</h2></center>
+      <div class="project-container">
         <h4>Store API</h4>
         <p>Built a secure API using FastAPI and MariaDB that allows users to purchase items displayed.</p>
+        <img src="../images/dbSite.png" alt="Store Api Site" style={{ width: '473.25px', height: '243.5px', borderRadius: '8px' }}></img>
         <h4>Non-profit organization website</h4>
         <p>Created a website for a mother and daughter to inform people about strokes and advertise their
           book about the daughters stroke experience and recovery from the mothers eyes.</p>
