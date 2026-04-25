@@ -1,16 +1,9 @@
-/* contact form styles */
-/* Font for Headers and Footers */
-/* @font-face {
-    font-family: 'Adobe Caslon Pro Regular';
-    src: url('../fonts/ACaslonPro-Regular.otf') format('otf'),
-         url('../fonts/ACaslonPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-} */
-
 * {
     box-sizing: border-box;
+}
+
+a:visited {
+    color: inherit;
 }
 
 html, body {
@@ -33,8 +26,10 @@ main {
 nav {
     text-align: right;
     font-size: 1.25em;
-    background-color: #c084d4;   /* add this — a deeper purple-pink */
-    padding: 8px 20px;           /* add this */
+    background-color: #c084d4;
+    padding: 8px 20px;
+    border-bottom: 1px solid #f4f4f4;
+    position: relative;
 }
 
 nav ul {
@@ -43,6 +38,7 @@ nav ul {
     padding: 0;
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 nav ul li {
@@ -93,62 +89,422 @@ nav ul li a img:hover {
     text-decoration: none;
 }
 
-/* Fix the header alignment to match the container */
-.header {
-    margin-left: 0;              /* remove the 150px — let the container handle centering */
+/* Title Bar */
+.title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #ffbcf5;
+    transition: background 0.3s ease;
+}
+
+.title-bar a {
+    text-decoration: none;
+}
+
+.title-bar h1 {
+    margin: 0;
+    color: #000;
+}
+
+/* Nav Social Icons */
+.nav-social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+    background: #e424c8;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: #f3e8ff;
+    border: 2px solid #d8b4fe;
+    border-radius: 999px;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #7c3aed;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Carousel */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    pointer-events: none;
+    width: 90%;
+}
+
+.carousel-text h1 {
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.carousel-text p {
+    margin-top: 12px;
+    opacity: 0.85;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.carousel-dot {
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Highlights Section */
+.highlights-section {
+    transition: background 0.3s ease;
+}
+
+.highlights-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.highlights-col {
+    flex: 1;
+}
+
+.highlights-divider-v {
+    width: 1px;
+    background: #0000ff;
+    align-self: stretch;
+}
+
+.highlights-divider-h {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #0000ff;
+}
+
+.highlights-about-inner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.highlights-about-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.highlights-top-project {
+    border: 1px solid #4a4aff;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.skill-pill {
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Skill Cards */
+.skill-card {
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+}
+
+.skill-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    background: #f0e6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.skill-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.skill-card-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #222;
     text-align: center;
 }
 
-/* Tighten the container spacing */
+.skills-divider {
+    width: 2px;
+    background: #e8d5f5;
+    align-self: stretch;
+    margin: 0 24px;
+    border-radius: 2px;
+}
+
+.skills-col-heading {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7c3aed;
+    margin-bottom: 4px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* Project Cards */
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #e8d5f5;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #a855f7;
+    box-shadow: 0 16px 40px rgba(168, 85, 247, 0.2);
+    background: #faf5ff;
+}
+
+.project-card-img-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.project-card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.project-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.project-card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-card-title-row h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.project-card-desc {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tag {
+    background: #f3e8ff;
+    color: #7c3aed;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.project-github-link {
+    color: #a855f7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+    text-align: center;
+    padding: 40px 0 20px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.bottom-nav a {
+    color: #444;
+    text-decoration: none;
+}
+
+.bottom-nav-sep {
+    margin: 0 8px;
+}
+
+/* About */
+.header {
+    margin-left: 0;
+    text-align: center;
+}
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;                   /* increase gap slightly for breathing room */
-    padding: 20px 40px;          /* add padding so nothing hugs the edges */
+    gap: 40px;
+    padding: 20px 40px;
 }
 
-/* Remove the extra margin on .image since gap handles spacing now */
 .image {
-    margin-left: 0;              /* remove the 100px */
-    flex-shrink: 0;              /* prevent image from squishing */
+    margin-left: 0;
+    flex-shrink: 0;
 }
 
-/* Constrain the text more so the image has room */
 .text {
-    font-size: 20px;             /* slightly smaller — 23px is quite large */
+    font-size: 20px;
     font-family: georgia;
-    /* color: #33691E; */
-    margin-right: 0;             /* gap handles spacing now */
-    max-width: 40%;              /* tighter than 50% so image isn't pushed right */
-    line-height: 1.7;            /* add for readability */
+    margin-right: 0;
+    max-width: 40%;
+    line-height: 1.7;
 }
 
-
+/* Projects (legacy) */
 .project-container {
-    display: flex; /* Align items horizontally */
-    justify-content: space-between; /* Add space between quote and person */
-    align-items: flex-start; /* Align content at the top */
-    margin-bottom: 20px; /* Add spacing between blocks */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
     padding: 10px;
 }
 
 .project {
-    flex: 3; /* Larger space for the quote */
-    padding-right: 40px; /* Add space between the quote and the person */
-    font-style: italic; /* Differentiate quotes visually */
-    color: #333; /* Adjust text color */
+    flex: 3;
+    padding-right: 40px;
+    font-style: italic;
+    color: #333;
     font-family: 'Hanken-Grotesk', hanken-grotesk, sans-serif;
 }
 
 .project-img {
-    flex: 1; /* Smaller space for the person's name */
-    text-align: right; /* Align the text to the right */
-    font-weight: bold; /* Highlight the person's name */
-    color: #555; /* Adjust text color */
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #555;
 }
 
-
+/* CTA Button */
 .cta-button {
     font-family: 'FaFont';
     display: inline-block;
@@ -167,6 +523,7 @@ nav ul li a img:hover {
     background-color: #b772e8;
 }
 
+/* Contact Form */
 .contact-form {
     max-width: 600px;
     margin: 20px auto;
@@ -176,7 +533,6 @@ nav ul li a img:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-
 }
 
 .contact-form h2 {
@@ -184,7 +540,6 @@ nav ul li a img:hover {
     text-align: center;
     color: #333333;
     margin-bottom: 20px;
-
 }
 
 .contact-form label {
@@ -192,7 +547,6 @@ nav ul li a img:hover {
     color: #333333;
     display: block;
     margin-bottom: 5px;
-    
 }
 
 .contact-form input[type="text"],
