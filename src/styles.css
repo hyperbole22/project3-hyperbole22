@@ -287,9 +287,6 @@ nav ul li a img:hover {
     cursor: default;
 }
 
-.skill-card:hover {
-    transform: translateY(-4px);
-}
 
 .skill-card-icon {
     width: 56px;

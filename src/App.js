@@ -290,8 +290,7 @@ function SkillCard({ skill, dark }) {
   const [hovered, setHovered] = React.useState(false);
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      
       className="skill-card"
       style={{
         background: dark
