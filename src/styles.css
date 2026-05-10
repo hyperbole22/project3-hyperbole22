@@ -1,0 +1,183 @@
+/* contact form styles */
+/* Font for Headers and Footers */
+/* @font-face {
+    font-family: 'Adobe Caslon Pro Regular';
+    src: url('../fonts/ACaslonPro-Regular.otf') format('otf'),
+         url('../fonts/ACaslonPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    /* font-family: 'Adobe Caslon Pro Regular', sans-serif !important; */
+}
+
+body {
+    /* background-color: #f3e6e0; */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+nav {
+    text-align: right;
+    font-size: 1.25em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li a span {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:not(:has(img))::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+nav ul li a:not(:has(img)):hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1; 
+}
+
+nav ul li a img {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+nav ul li a img:hover {
+    text-decoration: none;
+}
+
+.cta-button {
+    font-family: 'FaFont';
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #a02ef1;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b772e8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-form h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #333333;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #b772e8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+    max-width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.contact-form button:hover {
+    background-color: #471a68;
+    transform: scale(1.05);
+    transform-origin: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:active {
+    background-color: #a02ef1;
+    transform: scale(0.98);
+    transform-origin: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
