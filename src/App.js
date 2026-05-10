@@ -724,7 +724,7 @@ function Projects() {
 
   const [repos, setRepos] = React.useState([]);
   const [loadingRepos, setLoadingRepos] = React.useState(true);
-  const [selectedRepo, setSelectedRepo] = React.useState(null); // for modal (Option A)
+  const [selectedRepo, setSelectedRepo] = React.useState(null);
 
   React.useEffect(() => {
     fetch('https://api.github.com/users/hyperbole22/repos?sort=updated&per_page=10')
@@ -746,7 +746,7 @@ function Projects() {
 
   return (
     <>
-      <h2 style={{ color: dark ? '#f0d6ff' : undefined }}>Recent GitHub Activity</h2>
+      <h2 style={{ color: dark ? '#f0d6ff' : undefined }}>Projects</h2>
       {searchQuery && (
         <p style={{ color: dark ? '#c084fc' : '#7c3aed', marginBottom: '12px', fontSize: '0.9rem' }}>
           Showing {filteredRepos.length} result{filteredRepos.length !== 1 ? 's' : ''} for "{searchQuery}"
