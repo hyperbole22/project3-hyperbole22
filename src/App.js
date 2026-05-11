@@ -509,7 +509,7 @@ education right for them, and to get a job lined up with a lot of travel involve
         </div>
         <div className="image">
           <img src={process.env.PUBLIC_URL + "/images/sisswim.png"} alt="Alex Sullivan"
-            style={{ width: '563.25px', height: '422.25px', borderRadius: '8px' }} />
+          style={{ width: '563.25px', height: '422.25px', borderRadius: '8px' }} />
         </div>
       </div>
 
