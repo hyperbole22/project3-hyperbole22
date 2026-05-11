@@ -342,16 +342,16 @@ function Home() {
   const [fade, setFade] = React.useState(true);
 
   const slides = [
-    '../images/meschool.jpeg',
-    '../images/gamma.jpeg',
-    '../images/famswim1.jpeg',
-    '../images/meboat.jpeg',
-    '../images/sisbillie.jpeg',
-    '../images/famtrain.jpeg',
-    '../images/camping.jpeg',
-    '../images/cats.jpeg',
-    '../images/mecat.png',
-  ];
+  process.env.PUBLIC_URL + '/images/meschool.jpeg',
+  process.env.PUBLIC_URL + '/images/gamma.jpeg',
+  process.env.PUBLIC_URL + '/images/famswim1.jpeg',
+  process.env.PUBLIC_URL + '/images/meboat.jpeg',
+  process.env.PUBLIC_URL + '/images/sisbillie.jpeg',
+  process.env.PUBLIC_URL + '/images/famtrain.jpeg',
+  process.env.PUBLIC_URL + '/images/camping.jpeg',
+  process.env.PUBLIC_URL + '/images/cats.jpeg',
+  process.env.PUBLIC_URL + '/images/mecat.png',
+];
 
   const goToSlide = React.useCallback((index) => {
     if (index === currentSlide) return;
@@ -418,7 +418,7 @@ function Home() {
               <h3 style={{ margin: '0 0 12px' }}>About Me</h3>
             </Link>
             <div className="highlights-about-inner" style={{ flexDirection: isMobile ? 'column' : 'row' }}>
-              <img src="../images/mepretty.jpeg" alt="Alex Sullivan" className="highlights-about-img" />
+              <img src={process.env.PUBLIC_URL + "/images/mepretty.jpeg"} alt="Alex Sullivan" className="highlights-about-img" />
               <p style={{ margin: 0, lineHeight: '1.7', color: dark ? '#d4b8e0' : '#444444' }}>
                 <Highlight text="Hello! My name is Alex. I enjoy web and game design, you should go check out my projects. I also like swimming and crocheting." query={searchQuery} />
               </p>
@@ -597,21 +597,21 @@ education right for them, and to get a job lined up with a lot of travel involve
 
 {/* Skills page */}
 const languages = [
-  { name: 'Python',      logo: '../images/python.png' },
-  { name: 'Java',        logo: '../images/java.png' },
-  { name: 'JavaScript',  logo: '../images/javascript.png' },
-  { name: 'C++',         logo: '../images/cpp.png' },
-  { name: 'HTML5 & CSS', logo: '../images/html.png' },
-  { name: 'C#',          logo: '../images/csharp.png' },
+  { name: 'Python',      logo: process.env.PUBLIC_URL + '/images/python.png' },
+  { name: 'Java',        logo: process.env.PUBLIC_URL + '/images/java.png' },
+  { name: 'JavaScript',  logo: process.env.PUBLIC_URL + '/images/javascript.png' },
+  { name: 'C++',         logo: process.env.PUBLIC_URL + '/images/cpp.png' },
+  { name: 'HTML5 & CSS', logo: process.env.PUBLIC_URL + '/images/html.png' },
+  { name: 'C#',          logo: process.env.PUBLIC_URL + '/images/csharp.png' },
 ];
 
 const apps = [
-  { name: 'React',   logo: '../images/react.png' },
-  { name: 'Unity',   logo: '../images/unity.png' },
-  { name: 'FastAPI', logo: '../images/fastapi.png' },
-  { name: 'MariaDB', logo: '../images/mariadb.png' },
-  { name: 'Git',     logo: '../images/git.png' },
-  { name: 'VS Code', logo: '../images/vscode.png' },
+  { name: 'React',   logo: process.env.PUBLIC_URL + '/images/react.png' },
+  { name: 'Unity',   logo: process.env.PUBLIC_URL + '/images/unity.png' },
+  { name: 'FastAPI', logo: process.env.PUBLIC_URL + '/images/fastapi.png' },
+  { name: 'MariaDB', logo: process.env.PUBLIC_URL + '/images/mariadb.png' },
+  { name: 'Git',     logo: process.env.PUBLIC_URL + '/images/git.png' },
+  { name: 'VS Code', logo: process.env.PUBLIC_URL + '/images/vscode.png' },
 ];
 
 function SkillCard({ skill, dark, query }) {
@@ -694,7 +694,7 @@ const projectsData = [
     desc: 'Built a secure API using FastAPI and MariaDB that allows users to purchase items displayed.',
     github: 'https://github.com/hyperbole22/project1-nbbaddies',
     emoji: '🛒',
-    img: '../images/dbSite.png',
+    img: process.env.PUBLIC_URL + '/images/dbSite.png',
     imgAlt: 'Store API Site',
   },
   {
@@ -703,7 +703,7 @@ const projectsData = [
     desc: "Created a website for a mother and daughter to inform people about strokes and advertise their book about the daughter's stroke experience and recovery.",
     github: 'https://github.com/hyperbole22/InTheFaceOfCatastropheGroupWebsite',
     emoji: '💜',
-    img: '../images/nonproforg.png',
+    img: process.env.PUBLIC_URL + '/images/nonproforg.png',
     imgAlt: 'Non-profit organization website',
   },
   {
@@ -712,7 +712,7 @@ const projectsData = [
     desc: 'Designed and built this portfolio for anyone to be able to view my experience, visit, and get in contact with me.',
     github: 'https://github.com/PaceCS-344/project3-hyperbole22-2',
     emoji: '🗂️',
-    img: '../images/portfolio.png',
+    img: process.env.PUBLIC_URL + '/images/portfolio.png',
     imgAlt: 'Personal Portfolio',
   },
 ];
@@ -960,13 +960,13 @@ function ThemedApp({ isMobile, menuOpen, setMenuOpen }) {
             <NavSearchBar />
 
             <a href="mailto:klsullivan03@gmail.com">
-              <img src="/images/Gmail-Logo.png" alt="Gmail" width="40" height="32" />
+              <img src={process.env.PUBLIC_URL + "/images/Gmail-Logo.png"} alt="Gmail" width="40" height="32" />
             </a>
             <a href="https://www.linkedin.com/in/alex-sullivan-4046bb249/" target="_blank" rel="noopener noreferrer">
-              <img src="/images/linkedin_logo.png" alt="LinkedIn" width="32" height="32" />
+              <img src={process.env.PUBLIC_URL + "/images/linkedin_logo.png"} alt="LinkedIn" width="32" height="32" />
             </a>
             <a href="https://github.com/hyperbole22" target="_blank" rel="noopener noreferrer">
-              <img src="/images/github_logo.png" alt="GitHub" width="32" height="32" />
+              <img src={process.env.PUBLIC_URL + "/images/github_logo.png"} alt="GitHub" width="32" height="32" />
             </a>
           </div>
         </div>
