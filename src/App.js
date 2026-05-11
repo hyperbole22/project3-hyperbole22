@@ -960,13 +960,13 @@ function ThemedApp({ isMobile, menuOpen, setMenuOpen }) {
             <NavSearchBar />
 
             <a href="mailto:klsullivan03@gmail.com">
-              <img src="../images/Gmail-Logo.png" alt="Gmail" width="40" height="32" />
+              <img src="/images/Gmail-Logo.png" alt="Gmail" width="40" height="32" />
             </a>
             <a href="https://www.linkedin.com/in/alex-sullivan-4046bb249/" target="_blank" rel="noopener noreferrer">
-              <img src="../images/linkedin_logo.png" alt="LinkedIn" width="32" height="32" />
+              <img src="/images/linkedin_logo.png" alt="LinkedIn" width="32" height="32" />
             </a>
             <a href="https://github.com/hyperbole22" target="_blank" rel="noopener noreferrer">
-              <img src="../images/github_logo.png" alt="GitHub" width="32" height="32" />
+              <img src="/images/github_logo.png" alt="GitHub" width="32" height="32" />
             </a>
           </div>
         </div>
