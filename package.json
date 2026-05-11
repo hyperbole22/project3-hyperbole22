@@ -8,8 +8,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+=======
+    "predeploy": "npm run build",  
+	  "deploy": "gh-pages"
+>>>>>>> 975446f972ab6e8219c9b9635bb11e7451b8b630
   },
   "dependencies": {
     "cors": "^2.8.6",
