@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation, useNavigate, BrowserRouter } from 'react-router-dom';
 
 {/* Theme context */}
 const ThemeContext = React.createContext();
@@ -916,9 +916,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <SearchProvider>
-        <HashRouter>
+        <BrowserRouter>
           <ThemedApp isMobile={isMobile} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        </HashRouter>
+        </BrowserRouter>
       </SearchProvider>
     </ThemeProvider>
   );
