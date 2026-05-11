@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouterRouter, Routes, Route, Link, useLocation, useNavigate, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Link, useLocation, useNavigate, BrowserRouter } from 'react-router-dom';
 
 {/* Theme context */}
 const ThemeContext = React.createContext();
