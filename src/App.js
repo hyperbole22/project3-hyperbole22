@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouterRouter, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 
 {/* Theme context */}
 const ThemeContext = React.createContext();
@@ -508,7 +508,7 @@ education right for them, and to get a job lined up with a lot of travel involve
           </p>
         </div>
         <div className="image">
-          <img src="../images/sisswim.png" alt="Alex Sullivan"
+          <img src={process.env.PUBLIC_URL + "/images/sisswim.png"} alt="Alex Sullivan"
             style={{ width: '563.25px', height: '422.25px', borderRadius: '8px' }} />
         </div>
       </div>
@@ -916,9 +916,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <SearchProvider>
-        <BrowserRouter>
+        <HashRouter>
           <ThemedApp isMobile={isMobile} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        </BrowserRouter>
+        </HashRouter>
       </SearchProvider>
     </ThemeProvider>
   );
